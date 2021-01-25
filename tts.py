@@ -6,7 +6,7 @@ import tempfile
 from gtts import gTTS
 
 mt = input("")
-language = 'zh-CN'
+language = sys.argv[1]
 voice = gTTS(text=mt, lang=language, slow=False)
 new_file, path = tempfile.mkstemp()
 voice.save(path)
